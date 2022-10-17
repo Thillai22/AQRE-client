@@ -1,0 +1,19 @@
+
+.cart{
+  cursor: pointer;
+  text-decoration: none;
+}
+.cart span:nth-child(1){
+  font-size: 1rem;
+  color:white;
+}
+.cart span:nth-child(2){
+ padding: 0px 5px;
+ background-color: white;
+ border-radius: 150px;
+ position: relative;
+ top: -20px; 
+}
+
+
+
