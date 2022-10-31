@@ -4,7 +4,6 @@ import React from "react";
 import Home from "./Components/home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Register from "./Components/register";
-// import Signin from "./Components/sign_in";
 import Retail from "./Components/retail";
 import Custreg from "./Components/custreg";
 import Custlog from "./Components/custlog";
@@ -41,7 +40,7 @@ function App() {
             <Route path="view" element={<View />} />
             <Route path="edit" element={<Edit />} />
             <Route path="update" element={<Update />} />
-          </Route>
+          </Route>  
         </Routes>
       </Router>
     </div>

@@ -20,7 +20,7 @@ function Home() {
     // console.log(res.data);
   }, []);
   const fetchData = () => {
-    fetch("http://localhost:8000/getProduct")
+    fetch("https://aqre-server-production.up.railway.app/getProduct")
       .then((result) => result.json())
       .then((val) => {
         const ddata = val.data;

@@ -59,7 +59,7 @@ function Card(props, handleClick) {
       <div className="col-md-4">
         <div className="product py-4 ">
           <div className="text-center">
-            <img src={props.photo} alt={props.title} width="50%" />
+            <img src={props.photo} alt={props.title} width="50%" height="50%" />
           </div>
           <div className="about text-center">
             <h5 className="text-camelcase">{props.productName}</h5>{" "}
