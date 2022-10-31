@@ -47,7 +47,7 @@ export default function Edit() {
 
     console.log(fd);
 
-    fetch("http://localhost:8000/addProduct", {
+    fetch("https://aqre-server-production.up.railway.app/addProduct", {
       method: "POST",
 
       body: fd,

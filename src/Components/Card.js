@@ -30,7 +30,7 @@ function Card(props, handleClick) {
       alert("please do customer login");
       navigate("/custlog", { replace: true });
     } else {
-      fetch("http://localhost:8000/cart", {
+      fetch("https://aqre-server-production.up.railway.app/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

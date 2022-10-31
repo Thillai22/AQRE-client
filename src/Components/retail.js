@@ -26,7 +26,7 @@ export default function Retail() {
   const Login = async (e) => {
     e.preventDefault();
     const { email, password } = data;
-    fetch("http://localhost:8000/retail", {
+    fetch("https://aqre-server-production.up.railway.app/retail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

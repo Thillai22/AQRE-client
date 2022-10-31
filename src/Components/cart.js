@@ -25,7 +25,7 @@ export default function Cart(props) {
   });
   const fetchData = () => {
     let cemail = localStorage.getItem("cemail");
-    fetch("http://localhost:8000/getCartProduct", {
+    fetch("https://aqre-server-production.up.railway.app/getCartProduct", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export default function Cart(props) {
   };
   const fetchTotal = () => {
     let cemail = localStorage.getItem("cemail");
-    fetch("http://localhost:8000/getCartTotal", {
+    fetch("https://aqre-server-production.up.railway.app/getCartTotal", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ export default function Cart(props) {
   };
 
   const Delete = (item) => {
-    fetch("http://localhost:8000/deleteCartProduct", {
+    fetch("https://aqre-server-production.up.railway.app/deleteCartProduct", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -89,7 +89,7 @@ export default function Cart(props) {
   };
   const Placeorder = () => {
     let cemail = localStorage.getItem("cemail");
-    fetch("http://localhost:8000/getCartProduct", {
+    fetch("https://aqre-server-production.up.railway.app/getCartProduct", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export default function Cart(props) {
       .catch((err) => {
         console.log(err);
       });
-    fetch("http://localhost:8000/placeorder", {
+    fetch("https://aqre-server-production.up.railway.app/placeorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

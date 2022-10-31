@@ -22,7 +22,7 @@ export default function Custlog() {
   const Login = async (e) => {
     e.preventDefault();
     const { email, password } = data;
-    fetch("http://localhost:8000/custlog", {
+    fetch("https://aqre-server-production.up.railway.app/custlog", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

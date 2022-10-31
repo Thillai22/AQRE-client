@@ -21,24 +21,23 @@ export default function Orders(props) {
     });
     const fetchData = () => {
         let lemail = localStorage.getItem('lemail');
-        fetch('http://localhost:8000/getOrderProduct',{
-            method:"POST",
-            headers:{
-              "Content-Type": "application/json"
-            },
-            body:JSON.stringify({
-              lemail
-            })
-          }).then(result=>result.json())
-          .then(val=>{
-              console.log(val.data)
-              setData(val.data);
-            
-          }).catch(err=>{
-            console.log(err);
-            
-    
+        fetch("https://aqre-server-production.up.railway.app/getOrderProduct", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            lemail,
+          }),
+        })
+          .then((result) => result.json())
+          .then((val) => {
+            console.log(val.data);
+            setData(val.data);
           })
+          .catch((err) => {
+            console.log(err);
+          });
       
     };
     

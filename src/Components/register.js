@@ -25,19 +25,22 @@ export default function Register() {
     e.preventDefault();
     const { name, email, mobile, address, password } = data;
     if (password == data.confirmPassword) {
-      const res = await fetch("http://localhost:8000/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          mobile,
-          address,
-          password,
-        }),
-      });
+      const res = await fetch(
+        "https://aqre-server-production.up.railway.app/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            mobile,
+            address,
+            password,
+          }),
+        }
+      );
       if (res.status === 400) {
         alert("user exist");
       } else {

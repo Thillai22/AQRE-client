@@ -21,34 +21,33 @@ export default function Update() {
   const [pho, setPho] = useState(null);
   const fetchData = () => {
     
-    fetch('http://localhost:8000/updatefetch',{
-        method:"POST",
-        headers:{
-          "Content-Type": "application/json"
-        },
-        body:JSON.stringify({
-          id
-        })
-      }).then(result=>result.json())
-      .then(val=>{
-          console.log(val.data)
-          setData({
-            productName: val.data[0].productName,
-            productDescription: val.data[0].productDescription,
-            category: val.data[0].category,
-            price: val.data[0].price,
-            discount: val.data[0].discount,
-          });
-          console.log(val.data[0].photo)
+    fetch("https://aqre-server-production.up.railway.app/updatefetch", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id,
+      }),
+    })
+      .then((result) => result.json())
+      .then((val) => {
+        console.log(val.data);
+        setData({
+          productName: val.data[0].productName,
+          productDescription: val.data[0].productDescription,
+          category: val.data[0].category,
+          price: val.data[0].price,
+          discount: val.data[0].discount,
+        });
+        console.log(val.data[0].photo);
         //   setdphoto(val.data[0].photo.substr(13));
-          
-          console.log(data.productName)
-        
-      }).catch(err=>{
-        console.log(err);
-        
 
+        console.log(data.productName);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   
 };
   
@@ -89,14 +88,14 @@ export default function Update() {
 
     console.log(data);
 
-    fetch("http://localhost:8000/updateproduct", {
+    fetch("https://aqre-server-production.up.railway.app/updateproduct", {
       method: "POST",
 
       body: fd,
     })
       .then((res) => {
         let val = res.json();
-        
+
         // localStorage.setItem('lemail',null);
         navigate("/admin/view", { replace: true });
       })

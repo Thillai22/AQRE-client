@@ -41,7 +41,7 @@ function Home() {
     setFilter(e.target.value);
   };
   const Filter = () => {
-    fetch("http://localhost:8000/filter", {
+    fetch("https://aqre-server-production.up.railway.app/filter", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

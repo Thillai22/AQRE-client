@@ -21,7 +21,7 @@ export default function View(props) {
   });
   const fetchData = () => {
     let lemail = localStorage.getItem("lemail");
-    fetch("http://localhost:8000/getViewProduct", {
+    fetch("https://aqre-server-production.up.railway.app/getViewProduct", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export default function View(props) {
       });
   };
   const Delete = (item) => {
-    fetch("http://localhost:8000/deleteProduct", {
+    fetch("https://aqre-server-production.up.railway.app/deleteProduct", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -22,7 +22,7 @@ export default function YourOrder(props) {
 
   const fetchData = () => {
     let cemail = localStorage.getItem("cemail");
-    fetch("http://localhost:8000/getyourorder", {
+    fetch("https://aqre-server-production.up.railway.app/getyourorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
